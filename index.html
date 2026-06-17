@@ -1,13 +1,796 @@
 <!doctype html>
 <html lang="pt-BR">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bruno Recipes</title>
-    <meta http-equiv="refresh" content="0; url=/combo/">
-    <link rel="canonical" href="/combo/">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bruno Recipes | Receitas artesanais para vender</title>
+    <meta
+      name="description"
+      content="Conheca os ebooks artesanais de Bruno Recipes: Feijoada, Geleias, Molhos e Combo Completo, com receitas, tecnicas e orientacao para transformar cozinha comum em produtos vendaveis."
+    />
+    <link rel="canonical" href="https://brunorecipes.com/" />
+    <meta property="og:title" content="Bruno Recipes | Receitas artesanais para vender" />
+    <meta
+      property="og:description"
+      content="Uma colecao de ebooks para aprender producoes artesanais com sabor, tecnica, padronizacao e potencial de venda."
+    />
+    <meta property="og:image" content="https://brunorecipes.com/combo/assets/combo-capa.png" />
+    <meta property="og:type" content="website" />
+    <!-- Meta Pixel Code -->
+    <script>
+      !function (f, b, e, v, n, t, s) {
+        if (f.fbq) return;
+        n = f.fbq = function () {
+          n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments);
+        };
+        if (!f._fbq) f._fbq = n;
+        n.push = n;
+        n.loaded = true;
+        n.version = '2.0';
+        n.queue = [];
+        t = b.createElement(e);
+        t.async = true;
+        t.src = v;
+        s = b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t, s);
+      }(window, document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init', '827037113285006');
+      fbq('track', 'PageView');
+      fbq('trackCustom', 'BrunoRecipesHomeView');
+    </script>
+    <noscript>
+      <img height="1" width="1" style="display:none"
+        src="https://www.facebook.com/tr?id=827037113285006&ev=PageView&noscript=1" alt="">
+    </noscript>
+    <!-- End Meta Pixel Code -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:wght@700;800&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --ink: #21150f;
+        --muted: #6d5b4d;
+        --paper: #fff9ef;
+        --cream: #f5e5cf;
+        --cream-strong: #e9cfaa;
+        --red: #9c2d1f;
+        --red-dark: #65170f;
+        --green: #385f3e;
+        --berry: #69314c;
+        --gold: #d6963a;
+        --line: rgba(79, 45, 25, 0.16);
+        --shadow: 0 28px 80px rgba(44, 23, 12, 0.18);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        margin: 0;
+        color: var(--ink);
+        background: var(--paper);
+        font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        line-height: 1.55;
+      }
+
+      img {
+        display: block;
+        max-width: 100%;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      .container {
+        width: min(1160px, calc(100% - 32px));
+        margin: 0 auto;
+      }
+
+      .topbar {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 5;
+        width: 100%;
+        padding: 24px 0;
+        color: #fff9ef;
+      }
+
+      .topbar-inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 18px;
+      }
+
+      .brand {
+        font-weight: 900;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+      }
+
+      .nav {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+      }
+
+      .nav a {
+        padding: 10px 12px;
+        border: 1px solid rgba(255, 249, 239, 0.2);
+        border-radius: 999px;
+        color: #fff2df;
+        font-size: 0.82rem;
+        font-weight: 800;
+      }
+
+      .hero {
+        position: relative;
+        min-height: 100vh;
+        padding: 112px 0 46px;
+        color: #fff9ef;
+        background:
+          linear-gradient(90deg, rgba(29, 15, 8, 0.94) 0%, rgba(29, 15, 8, 0.74) 42%, rgba(29, 15, 8, 0.2) 100%),
+          url("combo/assets/combo-capa.png") center right / cover no-repeat;
+      }
+
+      .hero::after {
+        content: "";
+        position: absolute;
+        inset: auto 0 0;
+        height: 160px;
+        background: linear-gradient(180deg, rgba(255, 249, 239, 0), var(--paper));
+        pointer-events: none;
+      }
+
+      .hero-content {
+        position: relative;
+        z-index: 2;
+        display: grid;
+        grid-template-columns: minmax(0, 0.94fr) minmax(300px, 0.58fr);
+        gap: clamp(28px, 5vw, 64px);
+        align-items: end;
+        min-height: calc(100vh - 158px);
+      }
+
+      .eyebrow {
+        margin: 0 0 14px;
+        color: var(--gold);
+        font-size: 0.78rem;
+        font-weight: 900;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+      }
+
+      h1,
+      h2,
+      h3 {
+        margin: 0;
+        line-height: 1.04;
+        letter-spacing: 0;
+      }
+
+      h1,
+      h2 {
+        font-family: "Playfair Display", Georgia, serif;
+      }
+
+      h1 {
+        max-width: 760px;
+        color: #fff9ef;
+        font-size: clamp(2.55rem, 6vw, 5.85rem);
+      }
+
+      h2 {
+        color: var(--ink);
+        font-size: clamp(2rem, 4.4vw, 4.25rem);
+      }
+
+      h3 {
+        font-size: 1.25rem;
+      }
+
+      p {
+        margin: 0;
+      }
+
+      .hero-lead {
+        max-width: 670px;
+        margin-top: 22px;
+        color: #f6dfc7;
+        font-size: clamp(1.05rem, 2vw, 1.34rem);
+      }
+
+      .hero-actions,
+      .card-actions,
+      .final-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-top: 30px;
+      }
+
+      .button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 58px;
+        padding: 0 22px;
+        border-radius: 8px;
+        border: 0;
+        background: linear-gradient(180deg, #f0ad4d, #cd742d);
+        color: #231307;
+        box-shadow: 0 18px 42px rgba(0, 0, 0, 0.22);
+        font-weight: 950;
+        text-align: center;
+      }
+
+      .button.secondary {
+        background: rgba(255, 249, 239, 0.1);
+        color: #fff3df;
+        border: 1px solid rgba(255, 249, 239, 0.32);
+        box-shadow: none;
+      }
+
+      .trust-box {
+        padding: 22px;
+        border: 1px solid rgba(255, 249, 239, 0.24);
+        border-radius: 8px;
+        background: rgba(29, 15, 8, 0.54);
+        backdrop-filter: blur(8px);
+      }
+
+      .trust-box strong {
+        display: block;
+        margin-bottom: 8px;
+        color: #ffe2b0;
+        font-size: 1.08rem;
+      }
+
+      .trust-box span {
+        display: block;
+        color: #f3dfc9;
+        font-size: 0.96rem;
+      }
+
+      .section {
+        padding: clamp(70px, 9vw, 118px) 0;
+      }
+
+      .intro {
+        display: grid;
+        grid-template-columns: minmax(0, 0.9fr) minmax(280px, 0.52fr);
+        gap: clamp(28px, 5vw, 70px);
+        align-items: center;
+      }
+
+      .intro p {
+        margin-top: 18px;
+        color: var(--muted);
+        font-size: 1.08rem;
+      }
+
+      .profile {
+        overflow: hidden;
+        border-radius: 8px;
+        border: 1px solid var(--line);
+        box-shadow: var(--shadow);
+        background: var(--cream);
+      }
+
+      .profile img {
+        width: 100%;
+        aspect-ratio: 4 / 5;
+        object-fit: cover;
+      }
+
+      .profile div {
+        padding: 18px;
+        color: var(--muted);
+        font-weight: 700;
+      }
+
+      .products {
+        background: #f2dfc5;
+      }
+
+      .section-head {
+        display: grid;
+        grid-template-columns: minmax(0, 0.85fr) minmax(260px, 0.45fr);
+        gap: 28px;
+        align-items: end;
+        margin-bottom: 34px;
+      }
+
+      .section-head p {
+        color: var(--muted);
+        font-size: 1.03rem;
+      }
+
+      .product-grid {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 16px;
+      }
+
+      .product-card {
+        display: flex;
+        min-height: 100%;
+        flex-direction: column;
+        overflow: hidden;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: var(--paper);
+        box-shadow: 0 18px 44px rgba(70, 40, 20, 0.1);
+      }
+
+      .product-card.featured {
+        background: #21150f;
+        color: #fff9ef;
+      }
+
+      .product-media {
+        position: relative;
+        background: #291911;
+      }
+
+      .product-media img {
+        width: 100%;
+        aspect-ratio: 4 / 3;
+        object-fit: cover;
+      }
+
+      .product-body {
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+        padding: 18px;
+      }
+
+      .tag {
+        width: fit-content;
+        margin-bottom: 12px;
+        padding: 5px 9px;
+        border-radius: 999px;
+        background: rgba(156, 45, 31, 0.1);
+        color: var(--red);
+        font-size: 0.72rem;
+        font-weight: 900;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      .featured .tag {
+        background: rgba(214, 150, 58, 0.16);
+        color: #ffd27f;
+      }
+
+      .product-body p {
+        margin-top: 12px;
+        color: var(--muted);
+        font-size: 0.96rem;
+      }
+
+      .featured .product-body p {
+        color: #ead7c0;
+      }
+
+      .price {
+        margin-top: 16px;
+        color: var(--ink);
+        font-size: 1.08rem;
+        font-weight: 950;
+      }
+
+      .featured .price {
+        color: #ffe0a9;
+      }
+
+      .product-card .button {
+        width: 100%;
+        min-height: 52px;
+        margin-top: auto;
+        padding: 0 12px;
+        font-size: 0.88rem;
+        box-shadow: none;
+      }
+
+      .reason-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 16px;
+        margin-top: 34px;
+      }
+
+      .reason {
+        padding: 24px;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: #fffdf7;
+      }
+
+      .reason strong {
+        display: block;
+        margin-bottom: 10px;
+        color: var(--red-dark);
+        font-size: 1.06rem;
+      }
+
+      .reason p {
+        color: var(--muted);
+      }
+
+      .creator {
+        color: #fff9ef;
+        background:
+          linear-gradient(90deg, rgba(31, 18, 10, 0.94), rgba(31, 18, 10, 0.68)),
+          url("feijoada/images/feijoada.png") center / cover;
+      }
+
+      .creator h2 {
+        color: #fff9ef;
+      }
+
+      .creator p {
+        max-width: 760px;
+        margin-top: 18px;
+        color: #f1dcc4;
+        font-size: 1.08rem;
+      }
+
+      .creator-list {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 12px;
+        margin-top: 28px;
+      }
+
+      .creator-list span {
+        min-height: 86px;
+        padding: 16px;
+        border: 1px solid rgba(255, 249, 239, 0.22);
+        border-radius: 8px;
+        background: rgba(255, 249, 239, 0.09);
+        color: #fff0dc;
+        font-weight: 850;
+      }
+
+      .final {
+        text-align: center;
+      }
+
+      .final p {
+        max-width: 760px;
+        margin: 18px auto 0;
+        color: var(--muted);
+        font-size: 1.08rem;
+      }
+
+      .final-actions {
+        justify-content: center;
+      }
+
+      .final-actions .button.secondary {
+        color: var(--red-dark);
+        border-color: rgba(156, 45, 31, 0.22);
+        background: rgba(156, 45, 31, 0.06);
+      }
+
+      footer {
+        padding: 30px 0;
+        border-top: 1px solid var(--line);
+        color: var(--muted);
+        text-align: center;
+        font-size: 0.92rem;
+      }
+
+      @media (max-width: 1040px) {
+        .product-grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .hero {
+          background:
+            linear-gradient(90deg, rgba(29, 15, 8, 0.96), rgba(29, 15, 8, 0.72)),
+            url("combo/assets/combo-capa.png") center / cover no-repeat;
+        }
+      }
+
+      @media (max-width: 820px) {
+        .topbar {
+          position: relative;
+          background: #21150f;
+        }
+
+        .topbar-inner,
+        .intro,
+        .section-head,
+        .hero-content {
+          grid-template-columns: 1fr;
+        }
+
+        .topbar-inner {
+          align-items: flex-start;
+        }
+
+        .nav {
+          justify-content: flex-start;
+        }
+
+        .hero {
+          min-height: auto;
+          padding-top: 58px;
+        }
+
+        .hero-content {
+          min-height: auto;
+        }
+
+        .trust-box {
+          max-width: 520px;
+        }
+
+        .reason-grid,
+        .creator-list {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      @media (max-width: 620px) {
+        .container {
+          width: min(100% - 24px, 1160px);
+        }
+
+        .topbar-inner {
+          gap: 12px;
+        }
+
+        .nav a {
+          padding: 8px 10px;
+          font-size: 0.76rem;
+        }
+
+        .hero-actions,
+        .final-actions {
+          flex-direction: column;
+        }
+
+        .button {
+          width: 100%;
+        }
+
+        .product-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
   </head>
   <body>
-    <p>Redirecionando para <a href="/combo/">Combo Completo Artesanal</a>.</p>
+    <header class="topbar">
+      <div class="container topbar-inner">
+        <a class="brand" href="/">Bruno Recipes</a>
+        <nav class="nav" aria-label="Produtos">
+          <a href="#produtos">Produtos</a>
+          <a href="/combo/">Combo</a>
+          <a href="https://www.instagram.com/brunorecipes/" target="_blank" rel="noopener">Instagram</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container hero-content">
+          <div>
+            <p class="eyebrow">Receitas artesanais com tecnica de cozinha profissional</p>
+            <h1>Transforme comida de verdade em produtos artesanais prontos para vender.</h1>
+            <p class="hero-lead">
+              Uma colecao de ebooks criada para quem quer produzir feijoada, geleias e molhos com mais padrao,
+              sabor, apresentacao e potencial comercial, mesmo partindo de uma cozinha comum.
+            </p>
+            <div class="hero-actions">
+              <a class="button" href="https://pay.hotmart.com/V106121513I">Quero o Combo Completo</a>
+              <a class="button secondary" href="#produtos">Ver produtos individuais</a>
+            </div>
+          </div>
+          <aside class="trust-box">
+            <strong>Por Bruno Cavalcanti</strong>
+            <span>Ha mais de 15 anos criando pratos, cardapios e produtos artesanais nos seus restaurantes.</span>
+            <span>Receitas com foco em sabor, producao possivel, padronizacao e venda.</span>
+          </aside>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container intro">
+          <div>
+            <p class="eyebrow">O que e o Bruno Recipes</p>
+            <h2>Uma ponte entre cozinha afetiva, tecnica e produto vendavel.</h2>
+            <p>
+              Os materiais foram pensados para pessoas que gostam de cozinhar, querem melhorar a qualidade da
+              producao e desejam transformar receitas tradicionais em produtos com mais valor percebido.
+            </p>
+            <p>
+              Aqui voce encontra passo a passo, combinacoes de sabor, cuidados de preparo, ideias de venda e
+              caminhos praticos para comecar pequeno sem depender de estrutura industrial.
+            </p>
+          </div>
+          <figure class="profile">
+            <img src="combo/assets/bruno-cavalcanti.jpg" alt="Bruno Cavalcanti" />
+            <div>Receitas autorais, tecnica aplicada e linguagem simples para quem quer produzir melhor.</div>
+          </figure>
+        </div>
+      </section>
+
+      <section class="section products" id="produtos">
+        <div class="container">
+          <div class="section-head">
+            <div>
+              <p class="eyebrow">Escolha seu proximo produto artesanal</p>
+              <h2>Quatro caminhos para comecar, vender ou ampliar sua linha.</h2>
+            </div>
+            <p>
+              Cada ebook resolve uma frente especifica. O combo junta os tres materiais para quem quer montar uma
+              base mais completa de produtos artesanais.
+            </p>
+          </div>
+
+          <div class="product-grid">
+            <article class="product-card">
+              <div class="product-media">
+                <img src="feijoada/images/feijoada.png" alt="Feijoada artesanal servida em panela" />
+              </div>
+              <div class="product-body">
+                <span class="tag">Feijoada artesanal</span>
+                <h3>Segredos da Feijoada Artesanal</h3>
+                <p>
+                  Aprenda a preparar uma feijoada com sabor marcante, organizacao de producao e apresentacao de
+                  produto para vender ou servir com padrao.
+                </p>
+                <div class="price">De R$99,00 por R$67,00</div>
+                <div class="card-actions">
+                  <a class="button" href="https://pay.hotmart.com/Y103286666E">Comprar Feijoada</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card">
+              <div class="product-media">
+                <img src="combo/assets/combo-capa.png" alt="Capa do ebook de geleias artesanais dentro da colecao" />
+              </div>
+              <div class="product-body">
+                <span class="tag">Geleias gourmet</span>
+                <h3>Segredos das Geleias Artesanais</h3>
+                <p>
+                  Tecnicas para produzir geleias com brilho, textura, durabilidade, sabores autorais e potencial para
+                  cafeterias, presentes e encomendas.
+                </p>
+                <div class="price">R$67,00</div>
+                <div class="card-actions">
+                  <a class="button" href="https://pay.hotmart.com/S105913151A">Comprar Geleias</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card">
+              <div class="product-media">
+                <img src="molhos/assets/hero-molhos.png" alt="Molhos artesanais em potes" />
+              </div>
+              <div class="product-body">
+                <span class="tag">Molhos artesanais</span>
+                <h3>Segredos dos Molhos Artesanais</h3>
+                <p>
+                  Crie molhos para carnes, massas, saladas, petiscos e sanduiches com combinacoes mais profissionais
+                  e maior percepcao de valor.
+                </p>
+                <div class="price">R$67,00</div>
+                <div class="card-actions">
+                  <a class="button" href="https://pay.hotmart.com/A106042342L">Comprar Molhos</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card featured">
+              <div class="product-media">
+                <img src="combo/assets/combo-capa.png" alt="Colecao Segredos Artesanais com feijoada, geleias e molhos" />
+              </div>
+              <div class="product-body">
+                <span class="tag">Melhor escolha</span>
+                <h3>Combo Completo Artesanal</h3>
+                <p>
+                  Leve os tres ebooks juntos e tenha uma colecao para montar uma linha mais variada de produtos
+                  artesanais, com receitas, tecnicas e ideias de venda.
+                </p>
+                <div class="price">Feijoada + Geleias + Molhos</div>
+                <div class="card-actions">
+                  <a class="button" href="https://pay.hotmart.com/V106121513I">Comprar Combo</a>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="section-head">
+            <div>
+              <p class="eyebrow">Por que esses materiais existem</p>
+              <h2>Receita sozinha nao basta. Produto bom precisa de metodo.</h2>
+            </div>
+            <p>
+              A proposta e entregar mais do que uma lista de ingredientes: voce aprende a pensar preparo, padrao,
+              combinacao, apresentacao e venda de forma mais consciente.
+            </p>
+          </div>
+          <div class="reason-grid">
+            <div class="reason">
+              <strong>Tecnica possivel em cozinha comum</strong>
+              <p>Passos claros para produzir sem depender de equipamento industrial ou estrutura complexa.</p>
+            </div>
+            <div class="reason">
+              <strong>Produtos com mais valor percebido</strong>
+              <p>Sabores, apresentacao e ideias de uso que ajudam o cliente a enxergar valor no artesanal.</p>
+            </div>
+            <div class="reason">
+              <strong>Visao de venda e producao</strong>
+              <p>Materiais pensados para quem quer servir melhor, vender por encomenda ou iniciar renda extra.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section creator">
+        <div class="container">
+          <p class="eyebrow">Trajetoria aplicada na pratica</p>
+          <h2>Mais de 15 anos criando pratos, cardapios e experiencias gastronomicas.</h2>
+          <p>
+            Bruno Cavalcanti transformou a cozinha em laboratorio de criacao, atendimento e produto. Os ebooks nascem
+            dessa vivencia: receitas que precisam funcionar no mundo real, com sabor, organizacao e possibilidade de
+            escala.
+          </p>
+          <div class="creator-list">
+            <span>Receitas tradicionais com leitura comercial</span>
+            <span>Produtos artesanais para vender ou presentear</span>
+            <span>Didatica direta para iniciantes e pequenos produtores</span>
+            <span>Foco em sabor, qualidade e consistencia</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="section final">
+        <div class="container">
+          <p class="eyebrow">Comece pelo material certo para voce</p>
+          <h2>Escolha um produto individual ou leve a colecao completa.</h2>
+          <p>
+            Se voce quer testar uma linha especifica, escolha um ebook. Se quer montar uma base mais ampla de produtos
+            artesanais, o combo e o caminho mais completo.
+          </p>
+          <div class="final-actions">
+            <a class="button" href="https://pay.hotmart.com/V106121513I">Quero o Combo Completo</a>
+            <a class="button secondary" href="https://pay.hotmart.com/Y103286666E">Feijoada</a>
+            <a class="button secondary" href="https://pay.hotmart.com/S105913151A">Geleias</a>
+            <a class="button secondary" href="https://pay.hotmart.com/A106042342L">Molhos</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">
+        Bruno Recipes - Produtos digitais de culinaria artesanal. Suporte: brunorecipes@gmail.com
+      </div>
+    </footer>
   </body>
 </html>
