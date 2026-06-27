@@ -3,11 +3,14 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Segredos dos Molhos Artesanais</title>
+    <title>Segredos dos Molhos Artesanais | 50 receitas para produzir e vender</title>
     <meta
       name="description"
-      content="Aprenda a produzir 50 molhos artesanais saborosos, padronizados e vendáveis usando uma cozinha comum."
+      content="Aprenda 50 receitas de molhos artesanais para hambúrgueres, churrasco, carnes, massas e petiscos, com produção em cozinha comum e planilha de custos."
     />
+    <meta property="og:title" content="Segredos dos Molhos Artesanais" />
+    <meta property="og:description" content="50 receitas de molhos artesanais, método de produção, conservação, precificação e planilha profissional para consumo próprio ou venda." />
+    <meta property="og:image" content="assets/hero-molhos.png" />
     <!-- Meta Pixel Code -->
     <script>
       !function (f, b, e, v, n, t, s) {
@@ -57,14 +60,8 @@
         --radius: 8px;
       }
 
-      * {
-        box-sizing: border-box;
-      }
-
-      html {
-        scroll-behavior: smooth;
-      }
-
+      * { box-sizing: border-box; }
+      html { scroll-behavior: smooth; }
       body {
         margin: 0;
         font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
@@ -72,30 +69,13 @@
         background: var(--paper);
         line-height: 1.5;
       }
-
-      img {
-        display: block;
-        max-width: 100%;
-      }
-
-      a {
-        color: inherit;
-        text-decoration: none;
-      }
-
-      .page {
-        overflow: hidden;
-      }
-
-      .section {
-        padding: 76px 24px;
-      }
-
-      .container {
-        width: min(1120px, 100%);
-        margin: 0 auto;
-      }
-
+      img { display: block; max-width: 100%; }
+      a { color: inherit; text-decoration: none; }
+      .page { overflow: hidden; }
+      .section { padding: 78px 24px; }
+      .container { width: min(1120px, 100%); margin: 0 auto; }
+      .stack { display: grid; gap: 22px; }
+      .center { text-align: center; margin-left: auto; margin-right: auto; }
       .eyebrow {
         margin: 0 0 14px;
         color: var(--gold);
@@ -104,52 +84,23 @@
         letter-spacing: 0.12em;
         text-transform: uppercase;
       }
-
-      h1,
-      h2,
-      h3 {
-        margin: 0;
-        line-height: 1.04;
-      }
-
-      h1,
-      h2 {
-        font-family: "Playfair Display", Georgia, serif;
-      }
-
+      h1, h2, h3 { margin: 0; line-height: 1.04; }
+      h1, h2 { font-family: "Playfair Display", Georgia, serif; }
       h1 {
-        max-width: 900px;
+        max-width: 930px;
         color: #fff;
         font-size: clamp(2.55rem, 6vw, 5.7rem);
         letter-spacing: 0;
       }
-
-      h2 {
-        max-width: 850px;
-        font-size: clamp(2.1rem, 4vw, 4rem);
-        color: var(--ink);
-      }
-
-      h3 {
-        font-size: 1.2rem;
-      }
-
-      p {
-        margin: 0;
-      }
-
+      h2 { max-width: 860px; font-size: clamp(2.05rem, 4vw, 4rem); color: var(--ink); }
+      h3 { font-size: 1.18rem; }
+      p { margin: 0; }
       .lead {
-        max-width: 760px;
+        max-width: 790px;
         color: #efe2d3;
-        font-size: clamp(1.02rem, 2vw, 1.35rem);
+        font-size: clamp(1.02rem, 2vw, 1.34rem);
       }
-
-      .text {
-        max-width: 760px;
-        color: var(--muted);
-        font-size: 1.04rem;
-      }
-
+      .text { max-width: 780px; color: var(--muted); font-size: 1.04rem; }
       .btn {
         display: inline-flex;
         align-items: center;
@@ -161,29 +112,15 @@
         background: linear-gradient(135deg, #f0a23f, #d85b24);
         color: #211005;
         font-weight: 900;
-        font-size: 0.96rem;
+        font-size: 0.94rem;
         text-align: center;
         text-transform: uppercase;
         box-shadow: 0 18px 38px rgba(216, 91, 36, 0.34);
         transition: transform 0.18s ease, box-shadow 0.18s ease;
       }
-
-      .btn:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 22px 48px rgba(216, 91, 36, 0.42);
-      }
-
-      .btn.secondary {
-        background: #fff8ef;
-        color: var(--tomato-dark);
-        box-shadow: none;
-        border: 1px solid rgba(255, 255, 255, 0.35);
-      }
-
-      .micro {
-        color: rgba(255, 248, 239, 0.78);
-        font-size: 0.92rem;
-      }
+      .btn:hover { transform: translateY(-2px); box-shadow: 0 22px 48px rgba(216, 91, 36, 0.42); }
+      .btn.light { background: #fff8ef; color: var(--tomato-dark); box-shadow: none; }
+      .micro { color: rgba(255, 248, 239, 0.78); font-size: 0.92rem; }
 
       .hero {
         min-height: 100vh;
@@ -193,25 +130,16 @@
         color: #fff;
         background: var(--charcoal);
       }
-
       .hero::before {
         content: "";
         position: absolute;
         inset: 0;
         background:
-          linear-gradient(90deg, rgba(15, 8, 5, 0.9) 0%, rgba(15, 8, 5, 0.7) 42%, rgba(15, 8, 5, 0.18) 100%),
+          linear-gradient(90deg, rgba(15, 8, 5, 0.92) 0%, rgba(15, 8, 5, 0.72) 45%, rgba(15, 8, 5, 0.22) 100%),
           linear-gradient(0deg, rgba(15, 8, 5, 0.72), rgba(15, 8, 5, 0.18));
         z-index: 1;
       }
-
-      .hero-bg {
-        position: absolute;
-        inset: 0;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-      }
-
+      .hero-bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
       .hero .container {
         position: relative;
         z-index: 2;
@@ -221,12 +149,7 @@
         align-items: center;
         padding: 88px 0 64px;
       }
-
-      .hero-copy {
-        display: grid;
-        gap: 26px;
-      }
-
+      .hero-copy { display: grid; gap: 26px; }
       .hero-list {
         display: grid;
         grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -236,16 +159,7 @@
         margin: 0;
         list-style: none;
       }
-
-      .hero-list li {
-        display: flex;
-        gap: 10px;
-        align-items: flex-start;
-        color: #fff7ee;
-        font-weight: 600;
-        font-size: 0.98rem;
-      }
-
+      .hero-list li { display: flex; gap: 10px; color: #fff7ee; font-weight: 600; font-size: 0.98rem; }
       .check {
         flex: 0 0 22px;
         width: 22px;
@@ -259,32 +173,23 @@
         font-size: 0.8rem;
         font-weight: 900;
       }
-
-      .price-card {
-        align-self: end;
-        padding: 24px;
+      .price-card, .offer-panel {
+        padding: 26px;
         border: 1px solid rgba(255, 255, 255, 0.16);
         border-radius: var(--radius);
-        background: rgba(35, 18, 11, 0.72);
+        background: rgba(35, 18, 11, 0.74);
         box-shadow: var(--shadow);
         backdrop-filter: blur(12px);
       }
-
-      .price-card .from {
-        color: #ceb7a5;
-        font-size: 0.95rem;
-        text-decoration: line-through;
-      }
-
-      .price-card .price {
+      .price-card .from { color: #ceb7a5; font-size: 0.95rem; text-decoration: line-through; }
+      .price-card .price, .offer-panel .price {
         margin: 8px 0 16px;
         color: #fff;
         font-family: "Playfair Display", Georgia, serif;
         font-size: 3rem;
         font-weight: 800;
       }
-
-      .price-card ul {
+      .price-card ul, .offer-panel ul {
         display: grid;
         gap: 8px;
         padding: 16px 0 0;
@@ -295,80 +200,31 @@
         list-style: none;
       }
 
+      .cream { background: var(--cream); }
+      .cream-2 { background: var(--cream-2); }
+      .dark { background: var(--charcoal); color: #fff; }
+      .dark h2, .dark h3 { color: #fff; }
+      .dark .text { color: #ead9c7; }
       .split {
         display: grid;
-        grid-template-columns: minmax(0, 1.05fr) minmax(320px, 0.95fr);
+        grid-template-columns: minmax(0, 1.04fr) minmax(320px, 0.96fr);
         gap: 48px;
         align-items: center;
       }
-
-      .stack {
-        display: grid;
-        gap: 22px;
-      }
-
-      .visual {
-        border-radius: var(--radius);
-        overflow: hidden;
-        box-shadow: var(--shadow);
-        background: #ddd;
-      }
-
-      .visual img {
-        width: 100%;
-        height: 100%;
-        min-height: 360px;
-        object-fit: cover;
-      }
-
-      .cream {
-        background: var(--cream);
-      }
-
-      .dark {
-        background: var(--charcoal);
-        color: #fff;
-      }
-
-      .dark h2,
-      .dark h3 {
-        color: #fff;
-      }
-
-      .dark .text {
-        color: #ead9c7;
-      }
-
-      .grid {
-        display: grid;
-        gap: 18px;
-      }
-
-      .grid.three {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-      }
-
-      .grid.two {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
-
+      .grid { display: grid; gap: 18px; }
+      .grid.two { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .grid.three { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+      .grid.four { grid-template-columns: repeat(4, minmax(0, 1fr)); }
       .card {
         padding: 24px;
         border: 1px solid var(--line);
         border-radius: var(--radius);
-        background: rgba(255, 255, 255, 0.52);
+        background: rgba(255, 255, 255, 0.56);
       }
-
-      .card strong {
-        color: var(--tomato-dark);
-      }
-
-      .method-card {
-        display: grid;
-        gap: 12px;
-        min-height: 190px;
-      }
-
+      .card strong { color: var(--tomato-dark); }
+      .visual { border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); background: #ddd; }
+      .visual img { width: 100%; height: 100%; min-height: 360px; object-fit: cover; }
+      .author-photo img { aspect-ratio: 1; min-height: 0; object-position: center; }
       .num {
         width: 38px;
         height: 38px;
@@ -380,230 +236,118 @@
         color: #fff;
         font-weight: 900;
       }
-
-      .photo-strip {
-        display: grid;
-        grid-template-columns: 1.2fr 0.8fr 1fr;
-        gap: 16px;
-        margin-top: 34px;
+      .method-card { display: grid; gap: 12px; min-height: 188px; }
+      .bullets { display: grid; gap: 12px; padding: 0; margin: 0; list-style: none; }
+      .bullets li { display: grid; grid-template-columns: 22px 1fr; gap: 11px; color: var(--muted); }
+      .dark .bullets li { color: #ead9c7; }
+      .bullets .check { margin-top: 1px; transform: scale(0.86); }
+      .photo-strip { display: grid; grid-template-columns: 1.1fr 0.9fr 1fr; gap: 16px; margin-top: 34px; }
+      .photo-strip img { width: 100%; height: 280px; object-fit: cover; border-radius: var(--radius); box-shadow: var(--shadow); }
+      .photo-strip img:nth-child(2) { height: 340px; margin-top: -30px; }
+      .recipe-tags { display: flex; flex-wrap: wrap; gap: 10px; }
+      .recipe-tags span {
+        border: 1px solid rgba(167, 51, 30, 0.18);
+        border-radius: 999px;
+        background: #fff8ef;
+        padding: 11px 14px;
+        font-weight: 800;
+        color: var(--ink);
       }
-
-      .photo-strip img {
-        width: 100%;
-        height: 280px;
-        object-fit: cover;
+      .demo-shot {
+        min-height: 210px;
+        border: 1px dashed rgba(167, 51, 30, 0.28);
+        background: #fff8ef;
+        display: grid;
+        place-items: center;
+        text-align: center;
+        padding: 24px;
+      }
+      .demo-shot img { border-radius: var(--radius); box-shadow: 0 14px 34px rgba(40, 20, 10, 0.12); }
+      .value-stack { display: grid; gap: 12px; margin-top: 24px; }
+      .value-stack p {
+        display: flex;
+        justify-content: space-between;
+        gap: 18px;
+        padding: 13px 15px;
+        border: 1px solid rgba(255, 248, 239, 0.14);
         border-radius: var(--radius);
-        box-shadow: var(--shadow);
+        background: rgba(255, 248, 239, 0.08);
+        color: #fff4e7;
       }
-
-      .photo-strip img:nth-child(2) {
-        height: 340px;
-        margin-top: -30px;
-      }
-
-      .bullets {
-        display: grid;
-        gap: 12px;
-        padding: 0;
-        margin: 0;
-        list-style: none;
-      }
-
-      .bullets li {
-        display: grid;
-        grid-template-columns: 22px 1fr;
-        gap: 11px;
-        align-items: start;
-        color: var(--muted);
-      }
-
-      .bullets .check {
-        margin-top: 1px;
-        transform: scale(0.86);
-      }
-
+      .value-stack strong { color: var(--gold); white-space: nowrap; }
+      .value-stack .total { background: rgba(217, 148, 56, 0.19); border-color: rgba(217, 148, 56, 0.42); font-weight: 900; }
       .offer {
-        position: relative;
-        overflow: hidden;
         background:
           linear-gradient(135deg, rgba(31, 16, 10, 0.94), rgba(86, 28, 14, 0.93)),
           url("assets/churrasco-carnes.png") center/cover;
       }
-
       .offer-box {
         display: grid;
-        grid-template-columns: minmax(0, 1.1fr) minmax(320px, 0.9fr);
+        grid-template-columns: minmax(0, 1.08fr) minmax(320px, 0.92fr);
         gap: 30px;
         align-items: stretch;
       }
-
-      .offer-panel {
-        padding: 34px;
-        border-radius: var(--radius);
-        background: #fff8ef;
-        color: var(--ink);
+      .offer-panel { background: #fff8ef; color: var(--ink); }
+      .offer-panel .eyebrow { color: var(--tomato); }
+      .offer-panel .price { color: var(--tomato); font-size: clamp(3rem, 7vw, 5rem); }
+      .offer-panel ul { border-color: var(--line); color: var(--muted); }
+      .from-price { color: var(--muted); text-decoration: line-through; font-weight: 700; }
+      .seal {
+        display: grid;
+        place-items: center;
+        width: 160px;
+        aspect-ratio: 1;
+        border-radius: 50%;
+        background: radial-gradient(circle at 35% 25%, #fff6c9, var(--gold));
+        border: 8px solid #fff1c2;
+        color: var(--tomato-dark);
+        font-family: "Playfair Display", Georgia, serif;
+        font-size: 1.25rem;
+        font-weight: 900;
+        text-align: center;
+        text-transform: uppercase;
         box-shadow: var(--shadow);
       }
-
-      .offer-panel .price {
-        margin: 6px 0 4px;
-        color: var(--tomato);
-        font-family: "Playfair Display", Georgia, serif;
-        font-size: clamp(3rem, 7vw, 5rem);
-        line-height: 1;
-        font-weight: 800;
-      }
-
-      .from-price {
-        color: var(--muted);
-        text-decoration: line-through;
-        font-weight: 700;
-      }
-
-      .bonus {
-        border-color: rgba(216, 148, 56, 0.45);
-        background: #fff3df;
-      }
-
-      .compare {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 18px;
-      }
-
-      .compare .card:first-child {
-        background: rgba(255, 255, 255, 0.45);
-      }
-
-      .compare .card:last-child {
-        background: #fff8ef;
-        border-color: rgba(167, 51, 30, 0.28);
-        box-shadow: 0 18px 40px rgba(167, 51, 30, 0.11);
-      }
-
-      .faq {
-        display: grid;
-        gap: 12px;
-      }
-
+      .guarantee-box { display: grid; grid-template-columns: 180px 1fr; gap: 28px; align-items: center; }
+      .payment-grid article { background: #fff8ef; }
+      .faq { display: grid; gap: 12px; }
       details {
         border: 1px solid var(--line);
         border-radius: var(--radius);
-        background: rgba(255, 255, 255, 0.55);
+        background: rgba(255, 255, 255, 0.58);
         padding: 18px 20px;
       }
-
-      summary {
-        cursor: pointer;
-        font-weight: 800;
-        color: var(--ink);
-      }
-
-      details p {
-        margin-top: 10px;
-        color: var(--muted);
-      }
-
+      summary { cursor: pointer; font-weight: 800; color: var(--ink); }
+      details p { margin-top: 10px; color: var(--muted); }
       .final {
         text-align: center;
         background:
           linear-gradient(180deg, rgba(28, 18, 14, 0.86), rgba(28, 18, 14, 0.92)),
           url("assets/pimentas-agridoce.png") center/cover;
       }
-
-      .final h2,
-      .final p {
-        margin-left: auto;
-        margin-right: auto;
-      }
-
-      .footer {
-        padding: 26px 24px;
-        background: #120b08;
-        color: #bfae9e;
-        font-size: 0.9rem;
-        text-align: center;
-      }
-
-      .sticky-cta {
-        position: fixed;
-        z-index: 20;
-        right: 18px;
-        bottom: 18px;
-        display: none;
-      }
+      .footer { padding: 26px 24px; background: #120b08; color: #bfae9e; font-size: 0.9rem; text-align: center; }
+      .sticky-cta { position: fixed; z-index: 20; right: 18px; bottom: 18px; display: none; }
 
       @media (max-width: 940px) {
-        .hero .container,
-        .split,
-        .offer-box,
-        .grid.three,
-        .grid.two,
-        .compare {
+        .hero .container, .split, .offer-box, .grid.three, .grid.two, .grid.four, .guarantee-box {
           grid-template-columns: 1fr;
         }
-
-        .hero {
-          min-height: auto;
-        }
-
-        .hero .container {
-          padding: 74px 0 46px;
-        }
-
-        .price-card {
-          align-self: stretch;
-        }
-
-        .hero-list {
-          grid-template-columns: 1fr;
-        }
-
-        .photo-strip {
-          grid-template-columns: 1fr;
-        }
-
-        .photo-strip img,
-        .photo-strip img:nth-child(2) {
-          height: auto;
-          margin-top: 0;
-        }
-
-        .visual img {
-          min-height: 260px;
-        }
+        .hero { min-height: auto; }
+        .hero .container { padding: 74px 0 46px; }
+        .hero-list { grid-template-columns: 1fr; }
+        .price-card { align-self: stretch; }
+        .photo-strip { grid-template-columns: 1fr; }
+        .photo-strip img, .photo-strip img:nth-child(2) { height: auto; margin-top: 0; }
+        .visual img { min-height: 260px; }
+        .seal { margin: 0 auto; }
       }
-
       @media (max-width: 620px) {
-        .section {
-          padding: 56px 18px;
-        }
-
-        h1 {
-          font-size: 2.55rem;
-        }
-
-        h2 {
-          font-size: 2rem;
-        }
-
-        .btn {
-          width: 100%;
-          min-height: 54px;
-          padding: 0 18px;
-          font-size: 0.84rem;
-        }
-
-        .offer-panel,
-        .card {
-          padding: 20px;
-        }
-
-        .sticky-cta {
-          display: block;
-          left: 14px;
-          right: 14px;
-        }
+        .section { padding: 56px 18px; }
+        h1 { font-size: 2.55rem; }
+        h2 { font-size: 2rem; }
+        .btn { width: 100%; min-height: 54px; padding: 0 18px; font-size: 0.82rem; }
+        .offer-panel, .card { padding: 20px; }
+        .sticky-cta { display: block; left: 14px; right: 14px; }
       }
     </style>
   </head>
@@ -613,23 +357,23 @@
         <img class="hero-bg" src="assets/hero-molhos.png" alt="Potes de molhos artesanais em mesa rústica" />
         <div class="container">
           <div class="hero-copy">
-            <p class="eyebrow">Segredos dos Molhos Artesanais</p>
-            <h1>Aprenda a produzir molhos artesanais saborosos, padronizados e vendáveis usando apenas uma cozinha comum</h1>
+            <p class="eyebrow">50 receitas + planilha profissional</p>
+            <h1>Aprenda a criar sua primeira linha de molhos artesanais em uma cozinha comum</h1>
             <p class="lead">
-              Mesmo que você nunca tenha vendido comida antes, não tenha equipamentos profissionais e queira começar pequeno, direto da sua casa.
+              Produza molhos para hambúrgueres, churrasco, carnes, massas, petiscos e sanduíches com mais padrão, sabor e potencial de venda, mesmo que você esteja começando do zero.
             </p>
             <ul class="hero-list">
-              <li><span class="check">✓</span><span>50 receitas fáceis e reproduzíveis</span></li>
-              <li><span class="check">✓</span><span>Molhos com alto valor percebido</span></li>
+              <li><span class="check">✓</span><span>50 receitas organizadas por tipo de uso</span></li>
+              <li><span class="check">✓</span><span>Molhos defumados, picantes, cremosos e agridoce</span></li>
               <li><span class="check">✓</span><span>Produção em pequenos lotes</span></li>
-              <li><span class="check">✓</span><span>Kits para churrasco, massas e lanches</span></li>
-              <li><span class="check">✓</span><span>Envase, boas práticas e venda</span></li>
-              <li><span class="check">✓</span><span>Bônus: planilha de custos e vendas</span></li>
+              <li><span class="check">✓</span><span>Consumo próprio ou venda artesanal</span></li>
+              <li><span class="check">✓</span><span>Conservação, armazenamento e envase</span></li>
+              <li><span class="check">✓</span><span>Bônus: planilha de custos, produção e vendas</span></li>
             </ul>
             <div>
-              <a class="btn" href="oferta-combo.html?produto=molhos">Quero começar a produzir molhos hoje</a>
+              <a class="btn" href="oferta-combo.html?produto=molhos">Quero começar meus molhos hoje</a>
             </div>
-            <p class="micro">Acesso imediato • Pagamento único • 7 dias de garantia</p>
+            <p class="micro">Acesso digital • Compra segura Hotmart • Garantia informada no checkout</p>
           </div>
 
           <aside class="price-card" aria-label="Resumo da oferta">
@@ -639,8 +383,8 @@
             <a class="btn" href="oferta-combo.html?produto=molhos">Garantir meu acesso</a>
             <ul>
               <li>✓ E-book completo em formato digital</li>
-              <li>✓ 50 receitas organizadas por segmentos</li>
-              <li>✓ Bônus de custos, preço e combos</li>
+              <li>✓ 50 receitas para diferentes pratos</li>
+              <li>✓ Planilha profissional inclusa</li>
             </ul>
           </aside>
         </div>
@@ -649,13 +393,13 @@
       <section class="section cream">
         <div class="container split">
           <div class="stack">
-            <p class="eyebrow">A oportunidade</p>
-            <h2>Molho artesanal não é só acompanhamento. É produto, diferencial e motivo de recompra.</h2>
+            <p class="eyebrow">O problema não é falta de receita</p>
+            <h2>O difícil e transformar um molho gostoso em produto repetível, bonito e vendável.</h2>
             <p class="text">
-              Muita gente tenta vender comida começando por pratos complexos, estrutura cara e cardápios enormes. O caminho dos molhos é mais simples: você cria sabor, identidade e valor percebido em potes pequenos, usando ingredientes acessíveis e uma cozinha comum.
+              Receitas soltas da internet até ajudam a testar sabores, mas não ensinam como criar padrão, escolher aplicações, conservar melhor, calcular custo e vender com segurança. Sem processo, você improvisa toda vez.
             </p>
             <p class="text">
-              Um bom molho melhora hambúrguer, massa, churrasco, marmita, petisco e salada. E quando ele tem aparência bonita, sabor marcante e aplicação clara, fica muito mais fácil vender em kits, combos e adicionais.
+              O Segredos dos Molhos Artesanais organiza esse caminho para quem quer cozinhar melhor e também para quem enxerga molhos como uma oportunidade de renda extra com baixo investimento inicial.
             </p>
           </div>
           <div class="visual">
@@ -665,43 +409,21 @@
       </section>
 
       <section class="section">
-        <div class="container stack">
-          <p class="eyebrow">Como o método funciona</p>
-          <h2>O caminho completo: da receita ao pote vendável</h2>
-          <p class="text">
-            O “Segredos dos Molhos Artesanais” não é apenas um livro de receitas. Ele organiza o processo para você entender a base, preparar com padrão, aplicar em pratos reais e vender com mais segurança.
-          </p>
-          <div class="grid three">
-            <article class="card method-card">
-              <span class="num">1</span>
-              <h3>Bases dos molhos mais procurados</h3>
-              <p>Entenda os tipos de molhos usados em churrascos, massas, hambúrgueres, petiscos e pratos do dia a dia.</p>
-            </article>
-            <article class="card method-card">
-              <span class="num">2</span>
-              <h3>Produção simples e reproduzível</h3>
-              <p>Receitas práticas, acessíveis e feitas para funcionar em cozinhas comuns, sem equipamento profissional.</p>
-            </article>
-            <article class="card method-card">
-              <span class="num">3</span>
-              <h3>Pequenos lotes artesanais</h3>
-              <p>Comece pequeno, teste aceitação, controle rendimento e reduza perdas antes de produzir em maior volume.</p>
-            </article>
-            <article class="card method-card">
-              <span class="num">4</span>
-              <h3>Aplicação real</h3>
-              <p>Descubra onde cada molho entra para aumentar sabor, apresentação e valor percebido dos pratos.</p>
-            </article>
-            <article class="card method-card">
-              <span class="num">5</span>
-              <h3>Organização e venda</h3>
-              <p>Veja noções de envase, armazenamento, combos, precificação e formas simples de oferta.</p>
-            </article>
-            <article class="card method-card">
-              <span class="num">6</span>
-              <h3>Planilha bônus</h3>
-              <p>Organize custos, margem, preço de venda e kits para decidir com clareza antes de vender.</p>
-            </article>
+        <div class="container split">
+          <div class="stack">
+            <p class="eyebrow">Você não precisa de cozinha profissional</p>
+            <h2>O ponto de partida é uma cozinha comum, ingredientes acessíveis e um método claro.</h2>
+            <p class="text">
+              Molhos permitem começar em pequenos lotes, testar sabores e ajustar preço antes de produzir em maior volume. Isso reduz desperdício e ajuda você a descobrir quais produtos fazem sentido para sua família, clientes ou cardápio.
+            </p>
+            <div class="grid two">
+              <article class="card"><h3>Para cozinhar melhor</h3><p class="text">Tenha molhos próprios para hambúrgueres, churrascos, massas, carnes, petiscos e sanduíches.</p></article>
+              <article class="card"><h3>Para vender com mais clareza</h3><p class="text">Monte kits, combos e adicionais com custo calculado e proposta de uso fácil de explicar.</p></article>
+            </div>
+          </div>
+          <div class="card">
+            <h3>Oportunidade de negócio artesanal</h3>
+            <p class="text">Um bom molho aumenta o valor percebido de pratos simples. Ele pode virar adicional, presente, item de empório, complemento para churrasco ou produto de assinatura da sua marca.</p>
           </div>
         </div>
       </section>
@@ -710,21 +432,21 @@
         <div class="container">
           <div class="split">
             <div class="stack">
-              <p class="eyebrow">Prova visual</p>
-              <h2>Receitas pensadas para uso real, não para ficar bonitas só na foto</h2>
+              <p class="eyebrow">O que muda com o processo certo</p>
+              <h2>Você aprende a criar sabor com intenção, não apenas misturar ingredientes.</h2>
               <p class="text">
-                Os molhos foram organizados por segmentos de consumo: massas, queijos, cremes frios, churrasco, pimentas, saladas e orientais. Isso ajuda você a escolher o que produzir conforme o público e o prato que deseja vender.
+                O método conecta receita, aplicação, conservação, produção e preço. Assim, cada molho tem uma função clara: melhorar pratos, criar identidade e abrir possibilidades de venda.
               </p>
             </div>
             <ul class="bullets">
               <li><span class="check">✓</span><span>Molhos para hambúrgueres, batatas e lanches artesanais</span></li>
-              <li><span class="check">✓</span><span>Molhos para churrasco, espetinhos e carnes</span></li>
-              <li><span class="check">✓</span><span>Molhos para massas, pizzas e nhoques</span></li>
-              <li><span class="check">✓</span><span>Molhos para saladas, peixes, bowls e marmitas</span></li>
+              <li><span class="check">✓</span><span>Molhos para churrasco, espetinhos, carnes e defumados</span></li>
+              <li><span class="check">✓</span><span>Molhos para massas, pizzas, nhoques e sanduíches</span></li>
+              <li><span class="check">✓</span><span>Molhos frios, picantes, agridoce, orientais e cremosos</span></li>
             </ul>
           </div>
           <div class="photo-strip">
-            <img src="assets/frios-cremes.png" alt="Molhos frios e cremes artesanais aplicados em pratos" />
+            <img src="assets/frios-cremes.png" alt="Molhos frios e cremes artesanais" />
             <img src="assets/churrasco-carnes.png" alt="Molhos para churrasco e carnes" />
             <img src="assets/pimentas-agridoce.png" alt="Molhos de pimenta e agridoce" />
           </div>
@@ -732,71 +454,111 @@
       </section>
 
       <section class="section cream">
-        <div class="container split">
-          <div class="stack">
-            <p class="eyebrow">Para quem é</p>
-            <h2>Para quem quer começar pequeno, mas com cara de produto profissional</h2>
-            <ul class="bullets">
-              <li><span class="check">✓</span><span>Pessoas que querem fazer renda extra sem sair de casa</span></li>
-              <li><span class="check">✓</span><span>Quem deseja começar um pequeno negócio gastronômico</span></li>
-              <li><span class="check">✓</span><span>Quem vende marmitas, hambúrgueres, lanches ou churrasco</span></li>
-              <li><span class="check">✓</span><span>Iniciantes que gostam de cozinhar e não sabem por onde começar</span></li>
-              <li><span class="check">✓</span><span>Quem quer parar de depender de molhos industrializados</span></li>
-            </ul>
-          </div>
-          <div class="card bonus">
-            <h3>Você não precisa começar grande.</h3>
-            <p class="text">
-              A proposta é começar com utensílios básicos, ingredientes acessíveis e lotes pequenos. Primeiro você aprende a fazer bem. Depois entende custo, preço, aplicação e formas de vender.
-            </p>
+        <div class="container stack">
+          <p class="eyebrow">O que você vai aprender</p>
+          <h2>Da base do sabor ao pote pronto para consumo ou venda.</h2>
+          <div class="grid three">
+            <article class="card method-card"><span class="num">1</span><h3>Bases profissionais</h3><p>Entenda cremosidade, acidez, dulcor, picância, defumação e equilíbrio.</p></article>
+            <article class="card method-card"><span class="num">2</span><h3>Produção artesanal</h3><p>Prepare em cozinha comum, com processo simples e repetível.</p></article>
+            <article class="card method-card"><span class="num">3</span><h3>Aplicação nos pratos</h3><p>Saiba onde usar cada molho para aumentar sabor e valor percebido.</p></article>
+            <article class="card method-card"><span class="num">4</span><h3>Conservação</h3><p>Aprenda boas práticas de armazenamento, validade e envase artesanal.</p></article>
+            <article class="card method-card"><span class="num">5</span><h3>Precificação</h3><p>Organize custos, margem, kits e combos com mais clareza.</p></article>
+            <article class="card method-card"><span class="num">6</span><h3>Primeiras vendas</h3><p>Comece pequeno, valide sabores e evolua com menos risco.</p></article>
           </div>
         </div>
       </section>
 
       <section class="section">
         <div class="container stack">
-          <p class="eyebrow">O que você recebe</p>
-          <h2>Um material direto para preparar, aplicar e vender molhos artesanais</h2>
-          <div class="grid two">
-            <article class="card">
-              <h3>E-book completo “Segredos dos Molhos Artesanais”</h3>
-              <p class="text">
-                50 receitas práticas para massas, hambúrgueres, churrascos, saladas, petiscos, marmitas e lanches artesanais.
-              </p>
+          <p class="eyebrow">As 50 receitas</p>
+          <h2>Receitas para transformar hambúrgueres, churrascos, massas e petiscos.</h2>
+          <p class="text">O ebook organiza receitas por uso para fácilitar sua produção e sua venda. Você escolhe a linha que combina com seu objetivo: cozinhar melhor, vender kits ou melhorar o cardápio.</p>
+          <div class="recipe-tags">
+            <span>Molhos para hambúrguer</span>
+            <span>Molhos para churrasco</span>
+            <span>Molhos para carnes</span>
+            <span>Molhos para massas</span>
+            <span>Molhos para petiscos</span>
+            <span>Molhos para sanduíches</span>
+            <span>Molhos defumados</span>
+            <span>Molhos picantes</span>
+            <span>Molhos brancos e queijos</span>
+            <span>Molhos frios e cremes</span>
+            <span>Molhos orientais</span>
+            <span>Bases para novos sabores</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="section cream-2">
+        <div class="container stack">
+          <p class="eyebrow">Veja o que existe dentro do método</p>
+          <h2>Uma demonstração visual do que você recebe.</h2>
+          <div class="grid three">
+            <article class="card demo-shot">
+              <img src="assets/hero-molhos.png" alt="Capa e identidade visual do ebook de molhos" />
+              <h3>Ebook completo</h3>
+              <p class="text">Material digital com receitas e orientações organizadas para consulta prática.</p>
             </article>
-            <article class="card bonus">
-              <h3>Bônus especial: planilha de custos e vendas</h3>
-              <p class="text">
-                Calcule custo, preço de venda, margem de lucro, kits e combos para evitar prejuízo e vender com mais segurança.
-              </p>
+            <article class="card demo-shot">
+              <img src="assets/planilha-capa.png" alt="Planilha de custos, produção e vendas" />
+              <h3>Planilha profissional</h3>
+              <p class="text">Controle custos, preço, produção e vendas antes de oferecer seus molhos.</p>
+            </article>
+            <article class="card demo-shot">
+              <img src="assets/combo-capa.png" alt="Coleção Segredos Artesanais" />
+              <h3>Receitas e bônus</h3>
+              <p class="text">Estrutura para produzir, adaptar sabores, montar kits e vender com mais clareza.</p>
             </article>
           </div>
         </div>
       </section>
 
-      <section class="section cream">
+      <section class="section">
+        <div class="container split">
+          <div class="stack">
+            <p class="eyebrow">Quem criou o método</p>
+            <h2>Bruno Cavalcanti une cozinha real, produto artesanal e visão de negócio.</h2>
+            <p class="text">
+              Bruno tem mais de 15 anos de experiência gastronômica, já atuou como proprietário e gestor de restaurantes, desenvolveu receitas autorais e transformou cozinha em produto vendável.
+            </p>
+            <p class="text">
+              Este ebook nasceu dessa experiência prática: ensinar molhos com sabor, aplicação, padrão e possibilidade comercial, sem complicar o começo de quem ainda está em uma cozinha comum.
+            </p>
+          </div>
+          <div class="visual author-photo">
+            <img src="assets/bruno-cavalcanti.jpg" alt="Bruno Cavalcanti" />
+          </div>
+        </div>
+      </section>
+
+      <section class="section dark">
         <div class="container stack">
-          <p class="eyebrow">Comparativo</p>
-          <h2>Receitas soltas não constroem um produto. Método constrói.</h2>
-          <div class="compare">
-            <article class="card">
-              <h3>Cursos e conteúdos genéricos</h3>
-              <ul class="bullets">
-                <li><span>•</span><span>Receitas soltas sem lógica de venda</span></li>
-                <li><span>•</span><span>Pouca aplicação prática</span></li>
-                <li><span>•</span><span>Sem foco em pequenos lotes</span></li>
-                <li><span>•</span><span>Sem precificação ou combos</span></li>
-              </ul>
-            </article>
-            <article class="card">
-              <h3>Segredos dos Molhos Artesanais</h3>
-              <ul class="bullets">
-                <li><span class="check">✓</span><span>Receitas práticas e reproduzíveis</span></li>
-                <li><span class="check">✓</span><span>Foco em produção real e comercialização</span></li>
-                <li><span class="check">✓</span><span>Estratégia de pequenos lotes</span></li>
-                <li><span class="check">✓</span><span>Planilha de custos, vendas e combos</span></li>
-              </ul>
-            </article>
+          <p class="eyebrow">Mesmo começando do zero</p>
+          <h2>As principais travas respondidas antes da compra.</h2>
+          <div class="grid three">
+            <article class="card"><h3>Não sei cozinhar</h3><p>O conteúdo parte da lógica das bases e mostra receitas reproduzíveis.</p></article>
+            <article class="card"><h3>Não tenho experiência</h3><p>Você pode começar com receitas simples, testar e evoluir por etapas.</p></article>
+            <article class="card"><h3>Moro em apartamento</h3><p>A proposta é produção artesanal em pequenos lotes e cozinha comum.</p></article>
+            <article class="card"><h3>Não tenho equipamentos</h3><p>O método evita depender de estrutura profissional para iniciar.</p></article>
+            <article class="card"><h3>Não sei vender</h3><p>Você aprende aplicações, kits e combos para explicar melhor o produto.</p></article>
+            <article class="card"><h3>Não sei precificar</h3><p>A planilha ajuda a enxergar custo, margem e preço de venda.</p></article>
+            <article class="card"><h3>Tenho medo de errar</h3><p>O processo organiza sabor, conservação, armazenamento e repetição.</p></article>
+            <article class="card"><h3>Quero apenas consumir</h3><p>Você também pode usar as receitas para cozinhar melhor em casa.</p></article>
+            <article class="card"><h3>Não sei por onde começar</h3><p>Comece por uma linha: hambúrguer, churrasco, massas, petiscos ou pimentas.</p></article>
+          </div>
+          <div><a class="btn" href="oferta-combo.html?produto=molhos">Quero começar com segurança</a></div>
+        </div>
+      </section>
+
+      <section class="section cream">
+        <div class="container guarantee-box">
+          <div class="seal">Pote Seguro</div>
+          <div class="stack">
+            <p class="eyebrow">Garantia Pote Seguro</p>
+            <h2>Você compra pela Hotmart com mais tranquilidade.</h2>
+            <p class="text">Se o material não fizer sentido para você, use a garantia disponível na plataforma dentro do prazo informado no checkout. A compra deve deixar você seguro para conhecer o método, não pressionado.</p>
+            <div><a class="btn" href="oferta-combo.html?produto=molhos">Quero acessar sem complicação</a></div>
           </div>
         </div>
       </section>
@@ -804,121 +566,103 @@
       <section id="oferta" class="section dark offer">
         <div class="container offer-box">
           <div class="stack">
-            <p class="eyebrow">Oferta especial</p>
-            <h2>Comece hoje a produzir molhos artesanais com qualidade profissional dentro da sua própria casa</h2>
-            <p class="text">
-              Você recebe o e-book completo com 50 receitas, o método de produção artesanal e a planilha bônus para organizar custos, preços e combos.
-            </p>
-            <ul class="bullets">
-              <li><span class="check">✓</span><span>Acesso imediato ao material digital</span></li>
-              <li><span class="check">✓</span><span>Pagamento único</span></li>
-              <li><span class="check">✓</span><span>7 dias de garantia</span></li>
-              <li><span class="check">✓</span><span>Suporte pelo e-mail brunorecipes@gmail.com</span></li>
-            </ul>
+            <p class="eyebrow">Oferta de acesso imediato</p>
+            <h2>Segredos dos Molhos Artesanais por R$67,77</h2>
+            <p class="text">Você recebe o ebook completo com 50 receitas, método de produção artesanal, conservação, precificação e a planilha profissional para organizar custos, produção e vendas.</p>
+            <div class="value-stack">
+              <p><span>50 Receitas Artesanais</span><strong>R$197</strong></p>
+              <p><span>Método de Produção em Cozinha Comum</span><strong>R$97</strong></p>
+              <p><span>Guia de Conservação e Armazenamento</span><strong>R$67</strong></p>
+              <p><span>Guia de Precificação e Primeiras Vendas</span><strong>R$67</strong></p>
+              <p><span>Planilha Profissional de Custos e Vendas</span><strong>R$94</strong></p>
+              <p class="total"><span>Valor percebido total</span><strong>R$522</strong></p>
+            </div>
           </div>
           <aside class="offer-panel">
-            <p class="eyebrow">Segredos dos Molhos Artesanais</p>
+            <p class="eyebrow">Hoje por apenas</p>
             <p class="from-price">De R$99,00</p>
-            <p>Por apenas</p>
             <p class="price">R$67,77</p>
-            <p class="text">Pagamento único. Acesso imediato.</p>
+            <p class="text">Pagamento único. Opções de parcelamento aparecem no checkout da Hotmart.</p>
             <div style="height: 18px"></div>
-            <a class="btn" href="oferta-combo.html?produto=molhos">Quero começar agora</a>
-            <div style="height: 14px"></div>
-            <p style="color: var(--muted); font-size: 0.92rem">
-              Compra segura, acesso digital e 7 dias de garantia.
-            </p>
+            <a class="btn" href="oferta-combo.html?produto=molhos">Sim, quero minhas 50 receitas</a>
+            <ul>
+              <li>✓ Compra segura Hotmart</li>
+              <li>✓ Acesso digital após confirmação</li>
+              <li>✓ Planilha profissional inclusa</li>
+            </ul>
           </aside>
         </div>
       </section>
 
       <section class="section">
-        <div class="container split">
-          <div class="stack">
-            <p class="eyebrow">Autoridade</p>
-            <h2>Criado por quem viveu cozinha como trabalho, laboratório e estratégia</h2>
-            <p class="text">
-              O método foi construído com base em experiência prática real dentro da gastronomia: criação de cardápios, desenvolvimento de produtos autorais, processos de cozinha e produção artesanal com foco em qualidade e rentabilidade.
-            </p>
-            <p class="text">
-              Depois de atuar como dono de restaurantes e desenvolver inúmeros pratos e produtos, Bruno Cavalcanti criou este material para mostrar que ingredientes simples podem virar produtos premium com técnica, organização e inteligência.
-            </p>
-          </div>
-          <div class="visual">
-            <img src="assets/orientais-saladas.png" alt="Molhos artesanais aplicados em saladas, peixes e massas" />
+        <div class="container stack">
+          <p class="eyebrow">Pagamento simples</p>
+          <h2>Escolha a forma de pagamento no checkout e receba o acesso digital.</h2>
+          <div class="grid four payment-grid">
+            <article class="card"><h3>Cartão</h3><p class="text">Pague com cartão de crédito no checkout seguro da Hotmart.</p></article>
+            <article class="card"><h3>Pix</h3><p class="text">Quando disponível, use Pix para uma confirmação prática.</p></article>
+            <article class="card"><h3>Parcelamento</h3><p class="text">As opções de parcelamento aparecem no momento da compra.</p></article>
+            <article class="card"><h3>Acesso imediato</h3><p class="text">Após confirmação, você recebe as instruções no e-mail cadastrado.</p></article>
           </div>
         </div>
       </section>
 
       <section class="section cream">
         <div class="container stack">
-          <p class="eyebrow">Objeções respondidas</p>
-          <h2>Se alguma dessas dúvidas passou pela sua cabeça, aqui está a resposta</h2>
-          <div class="grid two">
-            <article class="card">
-              <h3>“Eu não tenho dinheiro para começar.”</h3>
-              <p>Você pode começar com utensílios básicos, ingredientes acessíveis e pequenos lotes dentro da própria cozinha.</p>
-            </article>
-            <article class="card">
-              <h3>“Eu não sei cozinhar profissionalmente.”</h3>
-              <p>O método foi criado para iniciantes. As receitas seguem uma lógica simples, prática e reproduzível.</p>
-            </article>
-            <article class="card">
-              <h3>“Eu não tenho equipamentos.”</h3>
-              <p>Você não precisa de cozinha industrial para começar. A proposta é produção artesanal em cozinha comum.</p>
-            </article>
-            <article class="card">
-              <h3>“Eu não sei calcular preço.”</h3>
-              <p>A planilha bônus ajuda a organizar custos, margem e preço de venda com mais clareza.</p>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section class="section">
-        <div class="container stack">
           <p class="eyebrow">Perguntas frequentes</p>
-          <h2>FAQ</h2>
+          <h2>40 respostas para decidir com clareza.</h2>
           <div class="faq">
-            <details open>
-              <summary>Os molhos têm validade?</summary>
-              <p>Sim. O e-book ensina boas práticas de armazenamento, envase e acondicionamento, sempre com orientação prudente para produção artesanal.</p>
-            </details>
-            <details>
-              <summary>Dá para começar em apartamento?</summary>
-              <p>Sim. O método foi pensado para produção artesanal em cozinhas comuns, sem equipamentos profissionais.</p>
-            </details>
-            <details>
-              <summary>Preciso ter experiência?</summary>
-              <p>Não. O material foi criado para iniciantes e intermediários que querem aprender com um caminho organizado.</p>
-            </details>
-            <details>
-              <summary>Qual molho posso começar a vender primeiro?</summary>
-              <p>O material mostra segmentos com maior aceitação e ideias de kits, como churrasco, massas e lanches.</p>
-            </details>
-            <details>
-              <summary>O acesso é imediato?</summary>
-              <p>Sim. Após a compra, o acesso ao material digital deve ser liberado automaticamente pela plataforma de checkout utilizada.</p>
-            </details>
-            <details>
-              <summary>Tem garantia?</summary>
-              <p>Sim. Você tem 7 dias de garantia para solicitar reembolso se entender que o material não é para você.</p>
-            </details>
+            <details open><summary>Funciona para iniciantes?</summary><p>Sim. O material foi criado para quem quer começar com processo, receitas e orientação.</p></details>
+            <details><summary>Preciso de cozinha profissional?</summary><p>Não. A proposta é produzir em cozinha comum.</p></details>
+            <details><summary>Preciso de equipamentos caros?</summary><p>Não para começar. O foco é produção artesanal acessível.</p></details>
+            <details><summary>Posso produzir em apartamento?</summary><p>Sim, respeitando organização, higiene, ventilação e pequenos lotes.</p></details>
+            <details><summary>O ebook tem 50 receitas?</summary><p>Sim. São 50 receitas organizadas por aplicação e tipo de molho.</p></details>
+            <details><summary>Tem molhos para hambúrguer?</summary><p>Sim. Há molhos para hambúrgueres, batatas, lanches e sanduíches.</p></details>
+            <details><summary>Tem molhos para churrasco?</summary><p>Sim. O conteúdo inclui molhos para churrasco, carnes e defumados.</p></details>
+            <details><summary>Tem molhos para massas?</summary><p>Sim. Há molhos para massas, pizzas, nhoques e pratos quentes.</p></details>
+            <details><summary>Tem molhos picantes?</summary><p>Sim. Molhos picantes e agridoce fazem parte da proposta.</p></details>
+            <details><summary>Tem molhos frios?</summary><p>Sim. Molhos frios, cremes e bases para petiscos também aparecem.</p></details>
+            <details><summary>Consigo criar meus próprios sabores?</summary><p>Sim. O ebook ensina bases e lógica de criação para adaptar receitas.</p></details>
+            <details><summary>O conteúdo fala de conservação?</summary><p>Sim. Conservação, armazenamento e boas práticas fazem parte do método.</p></details>
+            <details><summary>Fala de validade?</summary><p>Sim, com orientações prudentes para produção artesanal.</p></details>
+            <details><summary>Posso vender os molhos?</summary><p>Sim. O produto foi pensado para consumo próprio e venda artesanal.</p></details>
+            <details><summary>Preciso ter CNPJ?</summary><p>Você pode estudar e testar pequeno; para venda formal, siga as regras locais.</p></details>
+            <details><summary>O ebook ensina precificação?</summary><p>Sim. Há orientação e planilha para custos, margem e preço.</p></details>
+            <details><summary>A planilha vem junto?</summary><p>Sim. A planilha profissional está inclusa como bônus.</p></details>
+            <details><summary>Preciso saber Excel?</summary><p>Não precisa ser especialista. A ideia é fácilitar os cálculos principais.</p></details>
+            <details><summary>Posso montar kits?</summary><p>Sim. Os molhos combinam muito bem com kits para churrasco, lanches e presentes.</p></details>
+            <details><summary>Serve para hambúrgueria?</summary><p>Sim. Donos de hambúrguerias podem usar como diferencial de cardápio.</p></details>
+            <details><summary>Serve para quem faz churrasco?</summary><p>Sim. Há molhos para carnes, churrasco e acompanhamentos.</p></details>
+            <details><summary>Serve para quem vende marmita?</summary><p>Sim. Molhos podem aumentar sabor, variedade e valor percebido.</p></details>
+            <details><summary>Tenho pouco dinheiro. Serve para mim?</summary><p>Sim. Comece em pequenos lotes antes de escalar.</p></details>
+            <details><summary>Tenho pouco tempo.</summary><p>Você pode estudar e produzir uma linha por vez.</p></details>
+            <details><summary>Tenho medo de errar.</summary><p>O método organiza receita, processo e aplicação para reduzir improviso.</p></details>
+            <details><summary>Não sei vender.</summary><p>O conteúdo ajuda com aplicações, kits, combos e proposta de uso.</p></details>
+            <details><summary>Não sei por onde começar.</summary><p>Comece por uma categoria: hambúrguer, churrasco, massas, petiscos ou pimentas.</p></details>
+            <details><summary>Recebo material físico?</summary><p>Não. A entrega é digital.</p></details>
+            <details><summary>Como recebo acesso?</summary><p>A Hotmart envia as instruções para o e-mail cadastrado após confirmação.</p></details>
+            <details><summary>O acesso é imediato?</summary><p>Depois da confirmação do pagamento, o acesso digital é liberado conforme a Hotmart.</p></details>
+            <details><summary>Posso pagar com Pix?</summary><p>Use as opções disponíveis no checkout da Hotmart.</p></details>
+            <details><summary>Posso parcelar?</summary><p>As opções de parcelamento aparecem no checkout.</p></details>
+            <details><summary>A compra é segura?</summary><p>Sim. O pagamento é processado pela Hotmart.</p></details>
+            <details><summary>Tem garantia?</summary><p>Sim. A garantia segue prazo e condições exibidos no checkout.</p></details>
+            <details><summary>Tem suporte?</summary><p>Use o e-mail brunorecipes@gmail.com para contato relacionado ao produto.</p></details>
+            <details><summary>Tem atualizações?</summary><p>Consulte a área do produto e comunicações oficiais para atualizações disponíveis.</p></details>
+            <details><summary>Posso usar para consumo próprio?</summary><p>Sim. Você pode cozinhar melhor em casa sem vender nada.</p></details>
+            <details><summary>Posso usar em restaurante?</summary><p>Sim. As receitas ajudam a criar identidade e padrão de cardápio.</p></details>
+            <details><summary>O botão vai direto para o checkout?</summary><p>Ele leva para uma página de oferta do combo antes do checkout, onde você escolhe seguir com o ebook ou aproveitar a coleção.</p></details>
+            <details><summary>Por que comprar agora?</summary><p>Porque por R$67,77 você recebe receitas, processo e planilha para começar sem depender de tentativa e erro.</p></details>
           </div>
         </div>
       </section>
 
       <section class="section final dark">
-        <div class="container stack">
+        <div class="container stack center">
           <p class="eyebrow">Comece hoje</p>
-          <h2>Produza molhos artesanais com mais padrão, mais sabor e mais potencial de venda</h2>
-          <p class="lead">
-            Acesse agora o “Segredos dos Molhos Artesanais” por apenas R$67,77 e comece a transformar ingredientes simples em produtos com aparência profissional.
-          </p>
-          <div>
-            <a class="btn" href="oferta-combo.html?produto=molhos">Quero começar agora</a>
-          </div>
-          <p class="micro">Acesso imediato • Bônus incluso • 7 dias de garantia</p>
+          <h2>Transforme ingredientes simples em molhos com sabor, padrão e potencial de venda.</h2>
+          <p class="lead center">Acesse agora o Segredos dos Molhos Artesanais por R$67,77 e veja a oferta especial do combo antes do checkout.</p>
+          <div><a class="btn" href="oferta-combo.html?produto=molhos">Quero acessar as 50 receitas</a></div>
+          <p class="micro">Acesso digital • Planilha inclusa • Compra segura Hotmart</p>
         </div>
       </section>
     </main>
@@ -928,5 +672,58 @@
     <footer class="footer">
       <p>© 2026 Bruno Cavalcanti. Todos os direitos reservados. Contato: brunorecipes@gmail.com</p>
     </footer>
+    <script>
+      (function () {
+        var trackingKeys = [
+          "utm_source",
+          "utm_medium",
+          "utm_campaign",
+          "utm_content",
+          "utm_term",
+          "utm_id",
+          "fbclid",
+          "gclid",
+          "campaign_id",
+          "adset_id",
+          "ad_id"
+        ];
+        var storageKey = "bruno_recipes_tracking";
+
+        function getTracking() {
+          var params = new URLSearchParams(window.location.search);
+          var saved = {};
+          try {
+            saved = JSON.parse(sessionStorage.getItem(storageKey) || "{}");
+          } catch (error) {
+            saved = {};
+          }
+          trackingKeys.forEach(function (key) {
+            var value = params.get(key);
+            if (value) saved[key] = value;
+          });
+          if (Object.keys(saved).length) {
+            sessionStorage.setItem(storageKey, JSON.stringify(saved));
+          }
+          return saved;
+        }
+
+        function decorateUrl(rawUrl, tracking) {
+          var url = new URL(rawUrl, window.location.href);
+          Object.keys(tracking).forEach(function (key) {
+            if (!url.searchParams.has(key)) {
+              url.searchParams.set(key, tracking[key]);
+            }
+          });
+          return url.toString();
+        }
+
+        var tracking = getTracking();
+        document.querySelectorAll("a[href]").forEach(function (link) {
+          var href = link.getAttribute("href");
+          if (!href || (href.indexOf("oferta-combo.html") === -1 && href.indexOf("pay.hotmart.com") === -1)) return;
+          link.href = decorateUrl(href, tracking);
+        });
+      })();
+    </script>
   </body>
 </html>
